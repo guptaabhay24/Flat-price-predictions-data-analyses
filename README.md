@@ -1,21 +1,6 @@
 # 🏠 Bangalore House Price Prediction
 
 
-## 📜 Certification
-
-I have successfully completed a **Udemy course** covering:
-
-- Probability & Statistics
-- Basic Python Programming
-- Linear & Logistic Regression
-- Cluster Analysis
-- Deep Neural Networks
-- Real-world Case Studies
-
-📎 *Certificate of completion is attached below.*
-
----
-
 ## 💡 Project Overview: *"Prediction of Flat Prices in Bangalore"*
 
 This project focuses on predicting flat/apartment prices in Bangalore using various **data preprocessing**, **feature engineering**, and **machine learning** techniques.
@@ -69,5 +54,3 @@ The result: A clean and ready-to-model DataFrame.
 ├── model/                    # Saved .pkl and .json files
 ├── server/                   # Flask server files for deployment
 ├── notebooks/                # Jupyter notebooks for EDA and modeling
-├── certificate/              # Udemy course certificate
-└── README.md                 # Project documentation
