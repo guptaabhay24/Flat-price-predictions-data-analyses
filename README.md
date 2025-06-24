@@ -1,56 +1,49 @@
 # 🏠 Bangalore House Price Prediction
 
-
-## 💡 Project Overview: *"Prediction of Flat Prices in Bangalore"*
-
-This project focuses on predicting flat/apartment prices in Bangalore using various **data preprocessing**, **feature engineering**, and **machine learning** techniques.
+This project involves predicting flat/apartment prices in Bangalore using real-world housing data. The focus is on building a clean data pipeline and developing a robust regression model for accurate price prediction.
 
 ---
 
-## 🧹 Data Preprocessing
+## 🔧 Project Workflow
 
-Key steps in preparing the data:
+### 1. 📊 Data Preprocessing
+- Removed unnecessary columns
+- Dropped rows with missing/incomplete data
+- Standardized formats in all relevant columns
+- Removed outliers that could distort analysis
+- Final cleaned DataFrame prepared for modeling
 
-- ✅ Removed unnecessary columns
-- ✅ Dropped rows with missing/incomplete data
-- ✅ Standardized column formats
-- ✅ Removed **outliers** to improve model performance
+### 2. ⚙️ Feature Engineering
+- Converted categorical variables into numerical using **dummy variables**
+- Ensured model-ready input format
 
-The result: A clean and ready-to-model DataFrame.
+### 3. 🧠 Model Building
+- Split data into training and testing sets
+- Applied **Linear Regression** as the primary model
+- Compared it with other models — **Linear Regression** gave the best result with **84%+ accuracy**
+- Added a random seed to ensure reproducible data shuffling
+- Used a low test size to minimize overfitting
 
----
-
-## ⚙️ Feature Engineering
-
-- Converted categorical (string) variables to numerical format using **dummy variables**.
-- Handled numerical scaling implicitly via regression modeling.
-
----
-
-## 🧠 Model Training
-
-- Dataset split into **training** and **testing** sets.
-- Applied **Linear Regression** as the baseline model.
-- Compared performance with other models.
-- Achieved **84%+ accuracy** using Linear Regression.
-- Added **random constant (seed)** to maintain consistent shuffling of data.
-- Chose a **low test size** to avoid overfitting.
-  - (Note: Overfitting typically handled by monitoring validation loss — not used here.)
+### 4. 🗃️ Model Export & Deployment Setup
+- Created `.pkl` and `.json` files for saving the model and feature metadata
+- Set up a **Flask server** to serve predictions for deployment
 
 ---
 
-## 🗃️ Deployment Prep
+## 🧰 Tech Stack & Libraries
 
-- Created `.pkl` (pickle) and `.json` files for the model and feature inputs.
-- Set up a **basic Flask server** to prepare the project for deployment.
+- **Python**: pandas, numpy, matplotlib, seaborn
+- **Scikit-learn**: model training and evaluation
+- **Flask**: web server for model deployment
 
 ---
 
-## 📁 Project Structure
+## 📁 Folder Structure
 
 ```bash
 .
-├── data/                     # Raw and cleaned dataset
-├── model/                    # Saved .pkl and .json files
-├── server/                   # Flask server files for deployment
-├── notebooks/                # Jupyter notebooks for EDA and modeling
+├── data/            # Raw and cleaned datasets
+├── model/           # Pickle and JSON model files
+├── server/          # Flask app files for serving predictions
+├── notebooks/       # Jupyter notebooks for EDA and modeling
+└── README.md
